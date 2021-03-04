@@ -30,12 +30,13 @@
 	And miles to go before I sleep";
 
 
-	$lyric = explode( "\n", $lyric );
-	return wptexturize( $lyric[ mt_rand( 0, count( $lyric ) - 1 ) ] );
+	$lyric = explode( "\n", $lyric ); //split the lyrics into lines
+	return wptexturize( $lyric[ mt_rand( 0, count( $lyric ) - 1 ) ] );  //randomly choose a line.
 }
 
 function woods() {
-	$chosen = get_lyric();
+	$chosen = get_lyric(); //a randomly choosen line is stored into this variable.
+}
 	$lang   = '';
 	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
 		$lang = ' lang="en"';
